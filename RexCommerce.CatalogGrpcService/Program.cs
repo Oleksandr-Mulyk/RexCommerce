@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.AddServiceDefaults();
 
-builder.Services.AddTransient<ICategory, Category>()
+builder.Services.AddTransient<ICategory, Category>();
 builder.Services.AddTransient<IProduct, Product>();
 
 // Add services to the container.
