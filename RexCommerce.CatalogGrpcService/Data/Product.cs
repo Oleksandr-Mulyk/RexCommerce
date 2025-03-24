@@ -16,6 +16,12 @@
 
         public int Stock { get; set; }
 
-        public IList<Category> Categories { get; set; }
+        private IList<Category> _categories = [];
+
+        public IList<ICategory> Categories
+        {
+            get => (IList<ICategory>)_categories;
+            set => _categories = [.. value.Cast<Category>()];
+        }
     }
 }
