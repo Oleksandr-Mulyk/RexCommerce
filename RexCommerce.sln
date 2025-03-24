@@ -12,6 +12,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RexCommerce.Tests", "RexCom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RexCommerce.CatalogGrpcService", "RexCommerce.CatalogGrpcService\RexCommerce.CatalogGrpcService.csproj", "{0E0F418A-44ED-4086-B908-D16D9D06D27D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RexCommerce.CatalogLibrary", "RecCommerce.CtalogLibrary\RexCommerce.CatalogLibrary.csproj", "{0CD2D6B5-FCAC-43F9-8F42-161D5FB3A436}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +40,10 @@ Global
 		{0E0F418A-44ED-4086-B908-D16D9D06D27D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E0F418A-44ED-4086-B908-D16D9D06D27D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E0F418A-44ED-4086-B908-D16D9D06D27D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0CD2D6B5-FCAC-43F9-8F42-161D5FB3A436}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0CD2D6B5-FCAC-43F9-8F42-161D5FB3A436}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0CD2D6B5-FCAC-43F9-8F42-161D5FB3A436}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0CD2D6B5-FCAC-43F9-8F42-161D5FB3A436}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

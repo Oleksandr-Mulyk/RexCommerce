@@ -1,4 +1,4 @@
-﻿namespace RexCommerce.CatalogGrpcService.Data
+﻿namespace RexCommerce.CatalogLibrary
 {
     public interface ICategory
     {
