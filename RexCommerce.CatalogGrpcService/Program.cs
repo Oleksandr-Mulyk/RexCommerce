@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using RexCommerce.CatalogGrpcService.Data;
 using RexCommerce.CatalogGrpcService.Services;
 
@@ -7,6 +8,11 @@ builder.AddServiceDefaults();
 
 builder.Services.AddTransient<ICategory, Category>();
 builder.Services.AddTransient<IProduct, Product>();
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseSqlServer("catalogdb");
+});
 
 // Add services to the container.
 builder.Services.AddGrpc();

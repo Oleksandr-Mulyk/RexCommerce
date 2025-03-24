@@ -1,4 +1,6 @@
-﻿namespace RexCommerce.CatalogGrpcService.Data
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace RexCommerce.CatalogGrpcService.Data
 {
     public class Category : ICategory
     {
@@ -8,8 +10,10 @@
 
         public string Description { get; set; }
 
+        [Column("Products")]
         private IList<Product> _products = [];
 
+        [NotMapped]
         public IList<IProduct> Products
         {
             get => (IList<IProduct>)_products;
