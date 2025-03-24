@@ -9,15 +9,21 @@ builder.AddServiceDefaults();
 builder.Services.AddTransient<ICategory, Category>();
 builder.Services.AddTransient<IProduct, Product>();
 
-builder.Services.AddDbContext<ApplicationDbContext>(options =>
-{
-    options.UseSqlServer("catalogdb");
-});
+var connectionString = builder.Configuration.GetConnectionString("catalogdb")
+    ?? throw new InvalidOperationException("Connection string 'catalogdb' not found.");
+
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
 
 // Add services to the container.
 builder.Services.AddGrpc();
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    dbContext.Database.Migrate();
+}
 
 app.MapDefaultEndpoints();
 

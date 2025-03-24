@@ -12,6 +12,7 @@ namespace RexCommerce.CatalogGrpcService.Data
 
         public string Description { get; set; }
 
+        [Column(TypeName = "decimal(18,4)")]
         public decimal Price { get; set; }
 
         public string ImageUrl { get; set; }

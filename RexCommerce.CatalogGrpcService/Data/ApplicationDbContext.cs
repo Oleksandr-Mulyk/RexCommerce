@@ -12,7 +12,7 @@ namespace RexCommerce.CatalogGrpcService.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Product>().HasMany("Categories").WithMany("Products");
+            modelBuilder.Entity<Product>().HasMany("_categories").WithMany("_products");
         }
     }
 }

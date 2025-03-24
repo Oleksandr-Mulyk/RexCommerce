@@ -3,13 +3,13 @@ var builder = DistributedApplication.CreateBuilder(args);
 var catalogSql = builder.AddSqlServer("catalog-sql")
     .WithLifetime(ContainerLifetime.Persistent);
 
-catalogSql.AddDatabase("catalogdb");
+var catalogDb = catalogSql.AddDatabase("catalogdb");
 
 //var apiService = builder.AddProject<Projects.RexCommerce_ApiService>("apiservice");
 
 builder.AddProject<Projects.RexCommerce_CatalogGrpcService>("catalog-grpc-service")
-    .WithReference(catalogSql)
-    .WaitFor(catalogSql);
+    .WithReference(catalogDb)
+    .WaitFor(catalogDb);
 
 builder.AddProject<Projects.RexCommerce_Web>("webfrontend")
     .WithExternalHttpEndpoints();
