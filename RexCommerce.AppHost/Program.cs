@@ -7,4 +7,8 @@ builder.AddProject<Projects.RexCommerce_Web>("webfrontend")
     //.WithReference(apiService)
     //.WaitFor(apiService);
 
+builder.AddProject<Projects.RexCommerce_CatalogGrpcService>("rexcommerce-cataloggrpcservice");
+    //.WithReference(apiService)
+    //.WaitFor(apiService);
+
 builder.Build().Run();

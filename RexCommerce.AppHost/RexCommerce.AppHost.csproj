@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RexCommerce.ApiService\RexCommerce.ApiService.csproj" />
+    <ProjectReference Include="..\RexCommerce.CatalogGrpcService\RexCommerce.CatalogGrpcService.csproj" />
     <ProjectReference Include="..\RexCommerce.Web\RexCommerce.Web.csproj" />
   </ItemGroup>
 
