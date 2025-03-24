@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace RexCommerce.RepositoryLibrary
 {
-    public class DbContextRepository<T, TClass, TId>(
+    public abstract class DbContextRepository<T, TClass, TId>(
             DbSet<TClass> dbSet,
             DbContext dbContext
             ) : IRepository<T, TId> where T : class where TClass : class, T
