@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using RexCommerce.CatalogGrpcService.Data;
 using RexCommerce.CatalogGrpcService.Services;
+using RexCommerce.RepositoryLibrary;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,8 @@ builder.AddServiceDefaults();
 
 builder.Services.AddTransient<ICategory, Category>();
 builder.Services.AddTransient<IProduct, Product>();
+builder.Services.AddTransient<IRepository<IProduct>, ProductRepository>();
+builder.Services.AddTransient<IRepository<ICategory>, CategoryRepository>();
 
 var connectionString = builder.Configuration.GetConnectionString("catalogdb")
     ?? throw new InvalidOperationException("Connection string 'catalogdb' not found.");

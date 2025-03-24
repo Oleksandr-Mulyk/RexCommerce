@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RecCommerce.CtalogLibrary\RexCommerce.CatalogLibrary.csproj" />
+    <ProjectReference Include="..\RexCommerce.RepositoryLibrary\RexCommerce.RepositoryLibrary.csproj" />
     <ProjectReference Include="..\RexCommerce.ServiceDefaults\RexCommerce.ServiceDefaults.csproj" />
   </ItemGroup>
 
