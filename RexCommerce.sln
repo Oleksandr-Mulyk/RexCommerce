@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RexCommerce.ServiceDefaults
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RexCommerce.Web", "RexCommerce.Web\RexCommerce.Web.csproj", "{F0FDB5CE-FA00-7322-D705-639B1EFB11E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RexCommerce.Tests", "RexCommerce.Tests\RexCommerce.Tests.csproj", "{9CB7B9E9-BE39-9021-16BE-F721887AC5E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RexCommerce.RepositoryLibrary.Tests", "RexCommerce.Tests\RexCommerce.RepositoryLibrary.Tests.csproj", "{9CB7B9E9-BE39-9021-16BE-F721887AC5E3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RexCommerce.CatalogGrpcService", "RexCommerce.CatalogGrpcService\RexCommerce.CatalogGrpcService.csproj", "{0E0F418A-44ED-4086-B908-D16D9D06D27D}"
 EndProject

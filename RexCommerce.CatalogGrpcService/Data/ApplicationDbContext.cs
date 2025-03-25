@@ -2,10 +2,8 @@
 
 namespace RexCommerce.CatalogGrpcService.Data
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : DbContext(options)
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
-
         public DbSet<Product> Products { get; set; }
 
         public DbSet<Category> Categories { get; set; }
